@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timetable</title>
+<link rel="stylesheet" type="text/css" href="css/navigation.css">
+<link rel="stylesheet" type="text/css" href="css/clock.css">
+<link rel="stylesheet" type="text/css" href="css/timetable.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="navigation">
+          <ul>
+              <a href="#">
+                  <div class="toggle">
+                      <ion-icon name="menu-outline"></ion-icon>
+                  </div>
+              </a>
+              <li>
+                <a onclick="showUserDetails()">
+                    <span class="icon"><ion-icon name="person-circle-outline"></span>
+                    <span class="title">User</span>
+                </a>
+              </li>
+              <li>
+                  <a href="index.html">
+                      <span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span>
+                      <span class="title">Dashboard</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="timetable.html">
+                      <span class="icon"><ion-icon name="time-outline"></ion-icon></span>
+                      <span class="title">Timetable</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="attendance.html">
+                      <span class="icon"><ion-icon name="checkbox-outline"></ion-icon></span>
+                      <span class="title">Attendance</span>
+                  </a>
+              </li>
+              <li>
+                <a href="invigilators.html">
+                    <span class="icon"><ion-icon name="eye-outline"></ion-icon></span>
+                    <span class="title">Invigilators</span>
+                </a>
+              </li>
+              <li>
+                  <a onclick="signOut()" href="login.html">
+                      <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                      <span class="title">Sign out</span>
+                  </a>
+              </li>
+          </ul>
+    </div>
+  </div>
+    <!--main-->
+    <div class="main">
+      <!--realtime clock-->
+      <div class="clock">
+        <div class="time">
+          <div class="flip-clock-container">
+            <div class="flip-clock flip-clock-h">
+              <div class="digit digit-left">
+                <!-- ::before -->
+                <div class="card">
+                  <div class="card-face card-face-front"></div>
+                  <div class="card-face card-face-back"></div>
+                </div>
+                <!-- ::after -->
+              </div>
+              <div class="digit digit-right">
+                <!-- ::before -->
+                <div class="card">
+                  <div class="card-face card-face-front"></div>
+                  <div class="card-face card-face-back"></div>
+                </div>
+                <!-- ::after -->
+              </div>
+            </div>
+            <div class="colon">:</div>
+            <div class="flip-clock flip-clock-m">
+              <div class="digit digit-left">
+                <!-- ::before -->
+                <div class="card">
+                  <div class="card-face card-face-front"></div>
+                  <div class="card-face card-face-back"></div>
+                </div>
+                <!-- ::after -->
+              </div>
+              <div class="digit digit-right">
+                <!-- ::before -->
+                <div class="card">
+                  <div class="card-face card-face-front"></div>
+                  <div class="card-face card-face-back"></div>
+                </div>
+                <!-- ::after -->
+              </div>
+            </div>
+            <div class="colon">:</div>
+            <div class="flip-clock flip-clock-s">
+              <div class="digit digit-left">
+                <!-- ::before -->
+                <div class="card">
+                  <div class="card-face card-face-front"></div>
+                  <div class="card-face card-face-back"></div>
+                </div>
+                <!-- ::after -->
+              </div>
+              <div class="digit digit-right">
+                <!-- ::before -->
+                <div class="card">
+                  <div class="card-face card-face-front"></div>
+                  <div class="card-face card-face-back"></div>
+                </div>
+                <!-- ::after -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="date">
+          <span id="dayName">Day</span>,
+          <span id="month">Month</span>
+          <span id="dayNum">00</span>,
+          <span id="year">Year</span>
+        </div>
+      </div>
+
+      <!--refresh button-->
+      <div class="refresh">
+        <button onclick="window.location.reload()" id="refreshBtn" name="refreshBtn">&#x2B6E; Refresh</button>
+      </div>
+       <!--timetable-->
+      <div class="mainBoard">
+        <div class="tableList">
+          <div class="tableTitle">
+            <h2>Exam Schedule</h2>
+          </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Course</td>
+                    <td>Title</td>
+                    <td>Date</td>
+                    <td>Start-Time</td>
+                    <td>End-Time</td>
+                    <td>Venue</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        </div>
+      </div> 
+    </div>
+    
+    <!--icon script-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <!--fundamental script-->
+    <script src="js/mechanism.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/timetable.js"></script>
+</body>
+</html>

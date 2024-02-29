@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="center">
+      <h1>JJAL Examination System</h1>
+      <div class="loginForm">
+
+        <div class="txt_field">
+          <input id="staffId" type="text">
+          <span></span>
+          <label>Staff ID</label>
+        </div>
+
+        <div class="txt_field">
+          <input id="password" type="password">
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="fp">
+          <a target="_blank" href="http://www.quickmeme.com/img/bc/bc215adaebe790d88c5b827407aa15e721c2142f342b5e7c99c98ec1e877a7fa.jpg">Forgot Password?<br/></a>
+        </div>
+        
+        <button id="loginBtn" onclick="onSubmit()">Login</button>
+
+        <div class="problem">
+          Need Help? <a target="_blank" onclick="showRandom()">Click Here</a>
+          <div class="hiddenText"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      //when enter is pressed
+      $("#staffId").keypress(function(event) {
+        if (event.keyCode === 13) {
+          $("#loginBtn").click();
+        }
+      });
+      $("#password").keypress(function(event) {
+        if (event.keyCode === 13) {
+          $("#loginBtn").click();
+        }
+      });
+    </script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

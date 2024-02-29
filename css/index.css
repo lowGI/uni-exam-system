@@ -1,0 +1,173 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.refresh
+{   
+    display: flex;  
+    justify-content: center;  
+    align-items: center; 
+    margin-bottom: 20px;
+}
+.refresh #refreshBtn
+{
+    font-size: 15px;
+    padding: 10px 50px 10px 45px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.09);
+    background: var(--white);
+    color: var(--black1);
+}
+.refresh #refreshBtn:hover
+{
+    color: var(--white);
+    background-color: var(--blue);
+    cursor: pointer;
+}
+.cardBox
+{
+    position: relative;
+    width: 100%;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 60px;
+    margin-bottom: -40px;
+}
+.cardBox .card
+{   
+    margin-bottom: 40px;
+    position: relative;
+    background: var(--white);
+    padding: 22px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.09);
+    margin-left: 30px;
+}
+.cardBox .card [id$="_course"]
+{
+    position: relative;
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--blue);
+    margin-bottom: 5px;
+}
+.cardBox .card [id$="_duration"],
+.cardBox .card [id$="_venue"]
+{
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.cardBox .card [id$="_duration"] > *
+{
+    display: inline;
+}
+.cardBox .card .cardName
+{
+    color: var(--black2);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.cardBox .card .iconBx
+{
+    font-size: 3.7em;
+    margin-top: 20px;
+    margin-left: -10px;
+    color: var(--blue);
+    
+}
+.cardBox .card:hover
+{
+    background: var(--blue);
+}
+.cardBox .card:hover > *,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover [id$="_course"],
+.cardBox .card:hover .iconBx
+{
+    color: var(--white);
+}
+.cardBox .card #invigilatorCount,
+.cardBox .card #candidateCount
+{   
+    margin-top: 10px;
+    font-size: 2.4em;
+    color: var(--blue);
+}
+.cardBox .card:hover #invigilatorCount,
+.cardBox .card:hover #candidateCount
+{
+    color: var(--white);
+}
+.board
+{
+    position: relative;
+    width: 90%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 50px;
+    margin-top: 10px;
+}
+.boardHeader
+{
+    
+    margin-top: 20px;
+    text-align: center;
+}
+.boardHeader h2
+{
+    font-weight: 600;
+    color: var(--blue);
+    font-size: 25px;
+    
+}
+.board #mainBoard
+{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    width: 100%;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.09);
+    border-radius: 20px;
+    margin-left: 40px;
+    
+}
+.board #subBoard
+{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    width: 100%;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.09);
+    border-radius: 20px;
+    margin-left: 40px;
+}
+#attChart
+{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+}
+#inviStudChart
+{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+}

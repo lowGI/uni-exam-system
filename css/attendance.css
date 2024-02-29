@@ -1,0 +1,337 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root
+{
+    --present: #8de02c;
+    --absent: #f00;
+    --barred: #f9ca3f;
+    --pending: #1795ce;
+}
+.refresh
+{   
+    display: flex;  
+    justify-content: center;  
+    align-items: center; 
+    margin-bottom: 40px;
+    margin-top: 20px;  
+}
+button
+{
+    font-size: 15px;
+    padding: 10px 50px 10px 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.09);
+    background: var(--white);
+    overflow: hidden;
+    color: var(--black1);
+    cursor: pointer;
+}
+.active #refreshBtn
+{   
+    background-color: var(--blue);
+    color: var(--white);
+    animation: heartBeat 2s infinite;
+}
+@keyframes heartBeat 
+{
+    0% {transform: scale(1);}
+    5% {transform: scale(1.1);}
+    10% {transform: scale(1);}
+    15% {transform: scale(1.2);}
+    50% {transform: scale(1);}
+    100%{transform: scale(1);}
+}
+button:hover
+{
+    color: var(--white);
+    background-color: var(--blue);
+    cursor: pointer;
+}
+.searchBox
+{
+    text-align: center;
+    align-items: center;
+    justify-content: center;   
+}
+.content 
+{   
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+.searchHeader
+{
+    margin-top: 40px;
+}
+.searchHeader h3
+{
+    font-size: 20px;
+    color: var(--black1);
+}
+.searchBy
+{   
+    padding-top: 10px;
+    padding-left: 35px;
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.searchBy label
+{
+    margin-right: 15px;
+}
+.searchBy label input
+{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
+    transform: scale(1.2);
+}
+.searchBy label input:hover
+{
+    cursor: pointer;
+}
+.search
+{   
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.search label input
+{   
+    padding: 5px 20px 5px 20px;
+    font-size: 15px;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    /*border-bottom: 1px outset var(--black2);*/
+    margin-top: 35px;
+    text-align: center;
+    color: var(--black1);
+    box-shadow: 0 7px 10px rgba(0,0,0,0.09);
+    background-color: var(--white);
+}
+.search label input:disabled,
+#searchBtn:disabled,
+#searchBtn:disabled:hover
+{
+    background-color: #D3D3D3;
+    color: var(--black1);
+}
+
+.search label ion-icon
+{
+   position: relative; 
+   top: 4px;
+   right: 220px;
+   font-size: 1.2em;
+   margin-left: 10px;
+}
+.searchyBtn
+{
+    margin-top: 40px; 
+}
+#searchBtn
+{   
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: var(--blue);
+    color: var(--white);
+}
+#searchBtn:hover
+{
+    background-color: rgb(30, 71, 184);
+    color: var(--white);
+    transition: 0.2s;
+}
+.sideBoard
+{   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.sideBoard .indicator
+{   
+    position: relative;
+    background-color: var(--white);
+    padding: 10px;
+    word-spacing: 18px;
+    
+}
+.sideBoard .indicator [class^=color]
+{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.indicator [class$=present]
+{   
+    padding: 2px 6px;
+    background: var(--present);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.indicator [class$=absent]
+{   
+    padding: 2px 6px;
+    background: var(--absent);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.indicator [class$=barred]
+{   
+    padding: 2px 6px;
+    background: var(--barred);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.indicator [class$=pending]
+{   
+    padding: 2px 6px;
+    background: var(--pending);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.mainBoard
+{
+    position: relative;
+    width: 100%;
+    padding: 40px;  
+}
+.mainBoard .tableList
+{
+    position: relative;
+    display: grid;
+    min-height: 300px;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.09);
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+.tableTitle
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+.tableTitle h2
+{
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--blue);
+}
+.mainBoard table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.mainBoard table thead td
+{
+    font-weight: 600;
+    font-size: 20px;
+}
+.mainBoard .tableList table tr
+{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.mainBoard .tableList table tbody tr:last-child
+{   
+    border-bottom: none;
+}
+.mainBoard .tableList table tbody tr:hover
+{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.mainBoard .tableList table tr td
+{   
+    padding: 15px;
+}
+.mainBoard .tableList table tr td:nth-child(4),
+.mainBoard .tableList table tr td:nth-child(5),
+.mainBoard .tableList table tr td:last-child
+{
+    text-align: center;
+}
+
+.mainBoard .tableList table tbody tr td
+{
+    font-size: 18px;
+}
+.attendance
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.attendance .course [class^="status"]
+{
+    font-size: 18px;
+}
+.course [class$="present"]
+{
+    padding: 5px 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: var(--present);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.course [class$="absent"]
+{
+    padding: 5px 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: var(--absent);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.course [class$="barred"]
+{
+    padding: 5px 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: var(--barred);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+}
+.course [class$="pending"]
+{
+    padding: 5px 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: var(--pending);
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 500;
+}
+#notFound
+{
+    display: none;
+    font-size: 20px;
+    text-align: center;
+    color: var(--absent);
+}

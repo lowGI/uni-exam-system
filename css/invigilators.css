@@ -1,0 +1,197 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.refresh
+{   
+    display: flex;  
+    justify-content: center;  
+    align-items: center; 
+    margin-bottom: 40px;
+    
+}
+.refresh #refreshBtn
+{
+    font-size: 15px;
+    padding: 10px 50px 10px 45px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.09);
+    background: var(--white);
+    overflow: hidden;
+    color: var(--black1);
+}
+.refresh #refreshBtn:hover
+{
+    color: var(--white);
+    background-color: var(--blue);
+    cursor: pointer;
+}
+.search
+{   
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+}
+.search label
+{
+    position: relative;
+    width: 100%;
+    display: table-cell;
+    margin-top: 90px;
+}
+.search label input
+{   
+    width: 100%;
+    height: 35px;
+    border-radius: 40px;
+    padding: 15px 30px 15px 35px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid var(--black2);
+    margin-left: 20px;
+    margin-right: 50px;
+    border: none;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.09);
+}
+.search label ion-icon
+{
+   position: relative; 
+   top: -28px;
+   left: 20px;
+   font-size: 1.2em;
+   margin-left: 10px;
+}
+#searchBtn
+{   
+    display: none;
+    /*
+    height: 30px;
+    position: absolute;
+    padding-left: 3px;
+    padding-right: 3px;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    margin-right: 10px;
+    border: 1px solid var(--black2);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    border: none;
+    color: var(--black1);
+    */
+}
+#searchBtn:hover
+{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.sideBoard
+{   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.sideBoard .title
+{   
+    position: relative;
+    background-color: var(--white);
+    min-height: 120px;
+    background-color: var(--white);
+    padding-top: 30px;
+    
+}
+.sideBoard .title h2
+{
+    font-size: 25px;
+    color: var(--blue);
+}
+.mainBoard
+{
+    position: relative;
+    width: 100%;
+    padding: 0px 50px 60px 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.mainBoard .tableList
+{
+    position: relative;
+    display: grid;
+    min-height: 120px;
+    background-color: var(--white);
+    padding: 50px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.09);
+    border-radius: 20px;
+}
+.tableTitle
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.tableTitle h2
+{
+    font-weight: 700;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.mainBoard table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.mainBoard table thead td
+{
+    font-weight: 600;
+    font-size: 18px;
+}
+.mainBoard .tableList table tr
+{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    
+}
+.mainBoard .tableList table tbody tr:last-child
+{   
+    border-bottom: none;
+}
+.mainBoard .tableList table tbody tr:hover
+{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.mainBoard .tableList table tr td
+{   
+    padding: 15px;
+    
+}
+.mainBoard .tableList table tr td:last-child
+{
+    text-align: left;
+}
+.mainBoard .tableList table tbody tr td
+{
+    font-size: 18px;
+}
+.mainBoard:nth-child(1)
+{
+    display: none;
+}
+#notFound
+{   
+    display: none;
+    font-size: 20px;
+    text-align: center;
+    color: #f00;
+}
